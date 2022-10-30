@@ -1,10 +1,10 @@
 from http import HTTPStatus
-from django import test
+from django.test import Client, TestCase
 
 
-class StaticPagesURLTests(test.TestCase):
+class StaticPagesURLTests(TestCase):
     def setUp(self):
-        self.guest_client = test.Client()
+        self.guest_client = Client()
 
     def test_about_url_exists_at_desired_location(self):
         """Проверка доступности страниц."""

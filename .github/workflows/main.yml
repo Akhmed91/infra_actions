@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line scripts
+    - uses: actions/checkout@v2
+    - name: Run a one-line scripts
       run: echo Hello, world!
-      - name: Run a multi-line scripts
+    - name: Run a multi-line scripts
       run: |
       echo Add other actions to build,
       echo test, deploy your project.

@@ -38,12 +38,6 @@ jobs:
         cd infra_project/
         # запустить написанные разработчиком тесты
         python manage.py test
-  build:
-    runs-on: ubuntu-latest
-    needs: tests # Не выполнять сразу, ждать, пока выполнится tests
-    steps:
-    - name: Собрать и отправить образ приложения на DockerHub
-      run: docker build .
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub

@@ -72,6 +72,7 @@ jobs:
         host: ${{ secrets.HOST_YATUBE }}
         username: ${{ secrets.USER_YATUBE }}
         key: ${{ secrets.SSH_KEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull akhmed12/infra_actions
